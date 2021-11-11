@@ -1,0 +1,14 @@
+<PageLoading v-if="loading" class="min-height-full" />
+<v-row v-else justify="center" align="center" id="posts-page">
+  <v-col cols="12" sm="12">
+    <div class="section-title">Posts</div>
+    <div class="content">
+        <div v-show="posts.length === 0">
+          No posts yet
+        </div>
+        <div class="posts-container" v-show="posts.length">
+          <PostItem v-for="post in posts" :post="post" :key="post.id"/>
+        </div>
+      </div>
+  </v-col>
+</v-row>

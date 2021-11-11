@@ -1,0 +1,20 @@
+<v-row class="post-details">
+  <div class="content">
+    <div class="text-left text-bold">Title</div>
+    <div class="post-title">
+      {{postItem.title}}
+    </div>
+    <br />
+    <div class="text-left text-bold">Content</div>
+    <div class="post-content" v-html="postItem.content" />
+    <br />
+    <div class="text-left text-bold">Comments</div>
+    <div class="comments">
+      <ul>
+        <ol class="comment-item" v-for="comment in postItem.comments">
+          {{comment.body}}
+        </ol>
+      </ul>
+    </div>
+  </div>
+</v-row>

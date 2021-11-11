@@ -1,5 +1,5 @@
 <style lang="sass" scoped>
-  @import "./index.scss"
+ @import "./index.scss"
 </style>
 <template src="./index.html" />
 <script src="./index.js" />

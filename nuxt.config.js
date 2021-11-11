@@ -44,8 +44,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: ['@nuxtjs/axios'],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -63,6 +62,22 @@ export default {
           success: colors.green.accent3
         }
       }
+    }
+  },
+
+  axios: {
+    baseURL: 'http://expat.loc', // Used as fallback if no runtime config is provided
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: 'http://expat.loc'
+    }
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: 'http://expat.loc'
     }
   },
 

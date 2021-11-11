@@ -48,6 +48,7 @@
 </template>
 
 <script>
+
 export default {
   data () {
     return {
@@ -58,6 +59,11 @@ export default {
           icon: 'mdi-home',
           title: 'Home',
           to: '/home'
+        },
+        {
+          icon: 'mdi-heart',
+          title: 'Posts',
+          to: '/posts'
         },
       ],
       right: false,

@@ -1,4 +1,4 @@
-<v-row justify="center" align="center">
+<v-row justify="center" align="center" id="home-page">
   <v-col cols="12" sm="12">
     <div class="background-image">
       <div class="hero-text">
@@ -25,78 +25,7 @@
     </div>
     <div class="posts-container">
       <div class="section-title">Recent Posts</div>
-      <div class="post-item">
-        <div class="post-image">
-          <img src="../../static/post-image.png" alt="post image">
-        </div>
-        <div class="information-content">
-          <div class="title">Lorem ipsum.</div>
-          <div class="small-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, libero.
-          </div>
-          <div class="bottom-action">
-            <span class="date">08.11.2021</span>
-            <a href="#">
-              <span>Read more</span>
-              <v-icon>mdi-arrow-right</v-icon>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="post-item">
-        <div class="post-image">
-          <img src="../../static/post-image.png" alt="post image">
-        </div>
-        <div class="information-content">
-          <div class="title">Lorem ipsum.</div>
-          <div class="small-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, libero.
-          </div>
-          <div class="bottom-action">
-            <span class="date">08.11.2021</span>
-            <a href="#">
-              <span>Read more</span>
-              <v-icon>mdi-arrow-right</v-icon>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="post-item">
-        <div class="post-image">
-          <img src="../../static/post-image.png" alt="post image">
-        </div>
-        <div class="information-content">
-          <div class="title">Lorem ipsum.</div>
-          <div class="small-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, libero.
-          </div>
-          <div class="bottom-action">
-            <span class="date">08.11.2021</span>
-            <a href="#">
-              <span>Read more</span>
-              <v-icon>mdi-arrow-right</v-icon>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="post-item">
-        <div class="post-image">
-          <img src="../../static/post-image.png" alt="post image">
-        </div>
-        <div class="information-content">
-          <div class="title">Lorem ipsum.</div>
-          <div class="small-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, libero.
-          </div>
-          <div class="bottom-action">
-            <span class="date">08.11.2021</span>
-            <a href="#">
-              <span>Read more</span>
-              <v-icon>mdi-arrow-right</v-icon>
-            </a>
-          </div>
-        </div>
-      </div>
+      <PostItem v-for="post in pageData.posts" :post="post" :key="post.id" />
     </div>
   </v-col>
 </v-row>
